@@ -22,7 +22,7 @@ weight: 30
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           </h2>
 
-          {{ post.content | newline_to_br | split: '<br />' | first }}
+          {{ post.content }}
 
           <a href="{{ post.url }}">Read more</a>
         </li>

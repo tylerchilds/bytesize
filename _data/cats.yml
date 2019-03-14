@@ -6,3 +6,9 @@ features:
   name: Features
 apps:
   name: Apps
+spotlights:
+  name: Spotlights
+experimental:
+  name: Experimental
+asides:
+  name: Asides
