@@ -7,7 +7,7 @@ permalink: /posts/web-anatomy
 ---
 
 ## Prerequisites
-This post assumes you've got a web browser, a text editor, and can create an HTML Document. If that doesn't make sense, no worries, just go and check out the post title Hello World.
+This post assumes you've got a web browser, a text editor, and can create an HTML Document. If that doesn't make sense, no worries, just go and check out the post titled Hello World.
 
 ## Overview
 Every webpage is made up primarily of three technologies: Hypertext Markup Language (HTML), Cascading Style Sheets (CSS) and JavaScript (JS). Each of these has a distinct role and when they're all can combined produce amazing user experiences.
@@ -39,8 +39,6 @@ The two most common concepts with JavaScript on a webpage are Event Listeners an
 To tie HTML, CSS and JavaScript together, let's use an example of a counter. This is just some sample code that we can use to add 1 or subtract 1 to get a value between 0 and 10 (inclusive). 
 
 I hate contrived examples, so let's say this is for a client; A bouncer for the world's smallest club with a max occupancy of 10 hired you to build this app so they can keep track of everyone in the club. We'll need to make sure we never have a negative number of people in the club and we definitely can't have more than 10 otherwise the fire marshall will shut down the club.
-
-<iframe src="/posts/web-anatomy/example" width="100%" height="500px">
 
 ## Going Beyond
 When an HTML file is parsed by a browser, it's represented under the hood using the Document Object Model (DOM).The DOM is what CSS and JavaScript actually interface with when styling or manipulating your webpage. You don't need to know much about it, but it might be useful when learning to know that HTML Elements become DOM Nodes, so your JavaScript is actually interacting with these nodes.

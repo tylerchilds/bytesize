@@ -14,6 +14,6 @@ You're an engineer simply by having an interest in writing code. You might not b
 
 Whenever I want to get into a new hobby or interest, I begin by assuming the role. When I wanted to write, I said I'm a writer or a poet. I wanted to draw or paint, so I described myself an artist. Back in 2015, I declared myself to be a Dragon Slayer, because I wanted to accomplish many things I didn't think were possible.
 
-I'm a software engineer and if you're reading this and don't consider yourself a software engineer yet, you are one now. If anyone tells you otherwise send them my way and I'll remind them of all the things amazing things they are even if they don't realize it yet.
+I'm a software engineer and if you're reading this and don't consider yourself a software engineer yet, you are one now. If anyone tells you otherwise send them my way and I'll remind them of all the amazing things they are even if they don't realize it yet.
 
 You're a kick-ass person and even though other people may try and hold you back, you can do everything they tell you is impossible.
