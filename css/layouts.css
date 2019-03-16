@@ -17,6 +17,8 @@ body {
 
 .grid-sidebar {
   grid-area: sidebar;
+  margin-top: 4.8rem;
+  text-align: right;
 }
 
 .grid-main {

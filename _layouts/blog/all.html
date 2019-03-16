@@ -1,9 +1,8 @@
 ---
-layout: blog/default
+layout: default
 ---
 
 <section class="wrapper">
-  <h2>{{page.title}}</h2>
   <div class="post-list">
     {% for post in site.posts %}
       {% include blog/snippet.html post=post %}

@@ -1,70 +1,9 @@
-:root {
-  --base-font: 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
-  --monospace-font: 'Consolas', 'Monaco', 'Courier New', monospace;
-
-  --heading: var(--base-font);
-  --body: var(--base-font);
-  --monospace: var(--monospace-font);
-
-  --font-size: 1.6rem;
-  --line-height: 2.4rem;
-
-  --font-size--small: 1.2rem;
-  --font-size--large: 2rem;
-
-  --primary:#E83FB8;
-  --primary-dark:  var(--primary);
-
-  --link: #4076D4;
-  --link--visited: #9140D4;
-  --link--hover: var(--link);
-  --link--active: #D44076;
-
-  --gray1: #3c3c3d;
-  --gray2: #5a5a5b;
-  --gray3: #7d7d7e;
-
-  --gray4: #cdcdce;
-  --gray5: #dededf;
-  --gray6: #efeff0;
-
-  --white: #ffffff;
-
-  --brown: #954307;
-  --dark-orange: #ff5100;
-  --orange: #ff6b01;
-  --light-orange: #ff8f13;
-  --cream: #e9e1d4;
-}
-
 *{
   border: 0;
   font: inherit;
   margin: 0;
   padding: 0;
   text-rendering: geometricPrecision;
-}
-
-html{
-  box-sizing: border-box;
-  font-size: 62.5%;
-  height: 100%;
-}
-
-@media screen and (min-width: 960px){
-  html {
-    font-size: 78.125%;
-  }
-}
-
-body{
-  box-sizing: border-box;
-  color: var(--gray1);
-  font-family: var(--base-font);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  min-height: 100%;
-  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6{
