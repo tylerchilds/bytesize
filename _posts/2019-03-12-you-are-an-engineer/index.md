@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog/post
 title:  "You are an engineer"
 date:   2019-03-12 18:05:00 -0800
 categories: asides

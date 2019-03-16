@@ -1,5 +1,5 @@
 ---
-layout: blog_by_cat
+layout: blog/by_cat
 cat: basics
 permalink: /blog/category/basics/
 ---

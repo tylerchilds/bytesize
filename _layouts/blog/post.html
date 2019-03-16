@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog/default
 ---
 
 {% assign post = page %}
@@ -8,8 +8,10 @@ layout: blog
   {% for post_cat in post.categories %}
     {% assign cat = site.data.cats[post_cat] %}
     {% if cat %}
-      {% capture cats_content_temp %}{{ cats_content }}<a href="/blog/cat/{{ post_cat }}/">{{ cat.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
-      {% assign cats_content = cats_content_temp %}
+      {% capture cats_content %}
+        {{ cats_content }}
+        <a href="/blog/cat/{{ post_cat }}/">{{ cat.name }}</a>
+      {% endcapture %}
     {% endif %}
   {% endfor %}
 {% else %}

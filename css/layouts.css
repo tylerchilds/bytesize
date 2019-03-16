@@ -1,0 +1,30 @@
+body {
+  margin: auto;
+  max-width: initial;
+}
+
+.grid {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.-with-sidebar {
+  grid-template-areas: "sidebar main";
+  grid-template-columns: minmax(1fr, 200px) 1fr;
+  column-gap: 2.4rem;
+}
+
+.grid-sidebar {
+  grid-area: sidebar;
+}
+
+.grid-main {
+  grid-area: main;
+  width: 100%;
+  max-width: 65rem;
+}
+
+.-homepage {
+
+}
