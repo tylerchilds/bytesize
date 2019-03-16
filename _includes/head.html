@@ -21,6 +21,9 @@
 			--font-size--small: 1.2rem;
 			--font-size--large: 2rem;
 
+			--breakpoint: 900px;
+			--gutter-width: 2.4rem;
+
 			--primary:#E83FB8;
 			--primary-dark:  var(--primary);
 
@@ -85,8 +88,8 @@
 		}
 
 		.site-nav {
-			border-top: 1px solid var(--gray3);
-			border-bottom: 1px solid var(--gray3);
+			border-top: 1px solid var(--gray5);
+			border-bottom: 1px solid var(--gray5);
 			display: inline-block;
 			max-width: 100%;
 			padding: 0 4.8rem
@@ -102,7 +105,7 @@
 		}
 	</style>
 	<link rel="stylesheet" href="{{ "/css/base.css" | prepend: site.baseurl }}">
-	<link rel="stylesheet" href="{{ "/css/layouts.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 	{% if page.css %}
 		<link rel="stylesheet" href="{{ "/css/pages/" | prepend: site.baseurl }}{{ page.css }}">
 	{% endif %}

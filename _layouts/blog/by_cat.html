@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="wrapper">
-  <h2>Category: {{ site.data.cats[page.cat].name }}</h2>
+  <h2>{{ site.data.cats[page.cat].name }}</h2>
     {% if site.categories[page.cat] %}
       <div class="post-list">
         {% for post in site.categories[page.cat] %}

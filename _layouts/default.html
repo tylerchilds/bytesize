@@ -8,12 +8,12 @@
     {% include header.html %}
 
     <main class="page-content">
-      <div class="grid -with-sidebar">
-        <div class="grid-main">
-            {{ content }}
+      <div class="layout-two-column">
+        <div class="area-main">
+          {{ content }}
         </div>
-        <div class="grid-sidebar">
-            {% include sidebar.html %}
+        <div class="area-sidebar">
+          {% include sidebar.html %}
         </div>
       </div>
     </main>

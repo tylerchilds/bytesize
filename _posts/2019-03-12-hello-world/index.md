@@ -33,7 +33,8 @@ Using your text editor, create a new file called helloworld.html.
 
 In that file, enter the following HTML code:
 
-Iframe content with Hello World example
+{% include components/browser.html url="/examples/hello-world" height="200px" %}
+
 Download Zip
 
 If you double click an HTML file in a folder, it should open with your default browser. If that doesn't work or you want to try it with a different browser, right click the file and use "Open with" to select the browser you'd like to use.

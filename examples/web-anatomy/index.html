@@ -4,18 +4,11 @@ permalink: /examples/web-anatomy
 
 <!DOCTYPE html>
 <html>
-
-  <!-- When viewing this example on a page, this will display on the tab -->
   <title>Counter for A Bouncer</title>
 
   <style type="text/css">
-    /* 
-      Here we're creating a ruleset for our html element. We're mostly setting up styles to center the box easily
-      but it is worth calling out one property:
-      font-family, which will apply to all of the children (this is the Cascade in Cascading Style Sheets)
-    */
     html {
-      background-color: #ccc;
+      background-color: #f9f9f9;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       height: 100vh;
       margin: 0;
@@ -23,12 +16,9 @@ permalink: /examples/web-anatomy
       box-sizing: border-box;
     }
 
-    /*
-      CSS rule-set for our body element
-      Again, mostly setting up to center the box easily
-    */
     body {
       text-align: center;
+      border: 1px solid #ccc;
       background-color: #fff;
       border-radius: 10px;
       padding: 20px 10px 40px;
@@ -39,20 +29,11 @@ permalink: /examples/web-anatomy
       transform: translateY(-50%);
     }
 
-    /*
-      Rule-set for our h1 with font-size and some margins.
-      The values for margin are CSS Short-hand, which means:
-      I've set top, right, bottom, left in one fell swoop, in that order.
-    */
     h1 {
       font-size: 72px;
       margin: 10px 0 20px 0;
     }
 
-    /*
-      A class selector, using the class attribute in our HTML
-      When selecting an HTML element with a class attribute in CSS, you use a dot.
-    */
     .subtitle {
       color: #555;
     }
@@ -61,7 +42,6 @@ permalink: /examples/web-anatomy
       font-size: 32px;
     }
 
-    /* There are two counter-button classes on this page, so this applies to both of them */
     .counter-button {
       width: 30%;
       font-size: 16px;
@@ -76,7 +56,7 @@ permalink: /examples/web-anatomy
 
     <!--
       The aria-live attribute is for screen readers.
-      It will re-read this paragraph when it changes
+      It will re-read this paragraph when it changes.
     -->
     <p class="headcount-paragraph" aria-live="polite">
       The club currently has <strong id="headcount">0</strong> people.
@@ -90,52 +70,29 @@ permalink: /examples/web-anatomy
     </button>
 
     <script type="text/javascript">
-      // First, let's declare our variables
-      // let and const are keywords in javascript that are used for declaring variables
-      // const is for constant values that never change
-      // let is for variables that do change
+      let count = 0;
+      const minimum = 0;
+      const maximum = 10;
 
-      let count = 0; // To keep track of how many people are currently in the club
-      const minimum = 0; // To make sure the club doesn't have a negative amount of people
-      const maximum = 10; // To make sure the club doesn't have too many people
-
-      // Let's assign our button nodes to variables, so we can add Event Listeners to them
-      // We're accsessing them using the DOM API.
-      // The id from the HTML attributes for these elements are used to find the buttons
       const minusButton = document.getElementById('minusButton');
       const addButton = document.getElementById('addButton');
 
-      // Let's also assign a variable for the headcount element
-      // We'll use this element to display the current count inside of our club
       const headcount = document.getElementById('headcount');
 
-      // function is a key word in JavaScript for declaring a function.
-      // functions can take arguments, which are variables that the function can use
-      // in this example, we're receiving our new count as an argument
       function updateCount(newCount){
-        // This updates our count variable to now be the new count
         count = newCount;
 
-        // Now that we have an updated count variable, 
-        // let's update our headcount element with it
         headcount.innerText = count;
       }
 
-      // Now let's declare some functions for subtracting and adding to the count
-      // These will be our Event Handlers that will get called when the buttons get clicked
       function minus() {
         const newCount = count - 1;
 
-        // if is a control statement in JavaScript, so if the expression in the parenthesis is a true statement,
-        // then the code in that block (the code between the curly braces) will run.
-        // In this example, if our newCount is greater than or equal to our minimum, this code block will execute.
         if(newCount >= minimum) {
-          // here we're calling updateCount and passing our newCount as an argument
           updateCount(newCount);
         }
       };
 
-      // Our add function is basically the exact opposite of our minus function
       function add(){
         const newCount = count + 1;
 
@@ -144,12 +101,8 @@ permalink: /examples/web-anatomy
         }
       };
 
-      // Here we're taking our button elements (stored as variables) and adding Event Listeners
-      // The addEventListener function takes an event and Event Handler as arguments.
-      // For these, when the element is clicked, the corresponding Event Handler will be called
       addButton.addEventListener('click', add);
       minusButton.addEventListener('click', minus);
     </script>
   </body>
-
 </html>

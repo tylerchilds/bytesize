@@ -1,0 +1,157 @@
+/*
+  1: Layout
+*/
+
+body {
+  margin: auto;
+  max-width: initial;
+}
+
+footer {
+  display: grid;
+  column-gap: var(--gutter-width);
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--gray6);
+}
+
+/*
+  1.2: Homepage Layout
+*/
+
+.layout-homepage {
+
+}
+
+/*
+  1.3: Two Column Layout
+*/
+
+.layout-two-column {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 45rem) {
+  .layout-two-column {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: minmax(1fr, 200px) 1fr;
+    column-gap: var(--gutter-width);
+  }
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+}
+
+@media (min-width: 45rem) {
+  .area-sidebar {
+    margin-top: 4.8rem;
+    text-align: right;
+  }
+}
+
+@media (min-width: 45rem) {
+  .area-sidebar {
+    border-right: 1px solid var(--gray5);
+    padding-right: var(--gutter-width);
+  }
+}
+
+.area-main {
+  grid-area: main;
+  width: 100%;
+  max-width: 65rem;
+}
+
+/*
+  2. Post Lists
+*/
+
+.snippet {
+  margin-bottom: 2.4rem;
+  padding-bottom: 2.4rem;
+  position: relative;
+}
+
+.snippet::after {
+  border-bottom: 1px solid var(--gray5);
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: calc(-1 * var(--gutter-width));
+  right: 0;
+}
+
+.snippet:last-child::after {
+  content: none;
+}
+
+/*
+  3. Posts
+*/
+
+.post {
+  margin-bottom: 4.8rem;
+}
+
+/*
+  4 Examples
+*/
+
+.example {
+  --example-spacing: .6rem;
+  --example-outer-radius: 1.2rem;
+  --example-inner-radius: calc(var(--example-outer-radius) - var(--example-spacing));
+
+  background-color: var(--gray6);
+  border-radius: var(--example-outer-radius);
+  margin-bottom: 2.4rem;
+}
+
+.example-tab-list {
+  background-color: var(--gray4);
+  border-radius: var(--example-outer-radius) var(--example-outer-radius) 0 0;
+  padding-top: var(--example-spacing);
+  position: relative;
+}
+
+.example-tab {
+  background-color: var(--gray6);
+  border-radius: var(--example-spacing) var(--example-spacing) 0 0;
+  display: inline-block;
+  margin: 0 var(--example-spacing);
+  padding: .6rem 1.2rem;
+}
+
+.example-address {
+  background-color: var(--white);
+  border: 1px solid var(--gray4);
+  color: var(--gray2);
+  margin: var(--example-spacing) var(--example-spacing) 0;
+  padding: var(--example-spacing) calc(2 * var(--example-spacing));
+}
+
+.example-address input {
+  width: 100%;
+}
+
+.example-iframe {
+  padding: var(--example-spacing);
+}
+
+.example-iframe iframe {
+  background-color: var(--white);
+  box-sizing: border-box;
+  border: 1px solid var(--gray4);
+  border-radius: 0 0 var(--example-inner-radius) var(--example-inner-radius);
+}
+
+/*
+  7: Utilities
+*/
+
+.ta-right {
+  text-align: right;
+}
