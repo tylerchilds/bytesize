@@ -40,7 +40,7 @@ To tie HTML, CSS and JavaScript together, let's use an example of a counter. Thi
 
 I hate contrived examples, so let's say this is for a client; A bouncer for the world's smallest club with a max occupancy of 10 hired you to build this app so they can keep track of everyone in the club. We'll need to make sure we never have a negative number of people in the club and we definitely can't have more than 10 otherwise the fire marshall will shut down the club.
 
-{% include components/browser.html url="/examples/web-anatomy" height="500px" %}
+{% include components/browser.html url="/examples/web-anatomy" height="500px" title="Counter" %}
 
 ## Going Beyond
 When an HTML file is parsed by a browser, it's represented under the hood using the Document Object Model (DOM).The DOM is what CSS and JavaScript actually interface with when styling or manipulating your webpage. You don't need to know much about it, but it might be useful when learning to know that HTML Elements become DOM Nodes, so your JavaScript is actually interacting with these nodes.

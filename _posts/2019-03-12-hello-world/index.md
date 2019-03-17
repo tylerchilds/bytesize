@@ -33,7 +33,7 @@ Using your text editor, create a new file called helloworld.html.
 
 In that file, enter the following HTML code:
 
-{% include components/browser.html url="/examples/hello-world" height="200px" %}
+{% include components/browser.html url="/examples/hello-world" height="200px" title="Hello World" %}
 
 Download Zip
 

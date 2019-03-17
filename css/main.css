@@ -118,6 +118,7 @@ footer {
   background-color: var(--gray6);
   border-radius: var(--example-outer-radius);
   margin-bottom: 2.4rem;
+  border: 1px solid var(--gray4);
 }
 
 .example-tab-list {
