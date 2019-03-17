@@ -14,6 +14,16 @@ footer {
   background-color: var(--gray6);
 }
 
+.site-title:link,
+.site-title:visited,
+.site-title:hover,
+.site-title:focus,
+.site-title:active {
+  color: var(--gray1);
+  font-family: monospace;
+  text-decoration: none;
+}
+
 /*
   1.2: Homepage Layout
 */
