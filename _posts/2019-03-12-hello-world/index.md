@@ -4,6 +4,10 @@ title:  "Hello World"
 date:   2019-03-12 18:05:00 -0800
 categories: basics
 permalink: /posts/hello-world
+description: >
+  Hello World is a common way programmers learn a new language.
+  If you're brand new to web development or coding in general, this post is
+  a straight to the point introduction.
 ---
 
 ## Prerequisites
@@ -16,7 +20,7 @@ Once you've got your browser and your text editor installed and opened, go ahead
 ## Getting Started
 HTML is an acronym for Hypertext Markup Language. You don't really need to know that though; it won't be on the test. What you do need to know is that HTML is the backbone of the web and dictates how content is structured. With HTML alone, you can make a document with images and descriptions of all of your cats to share with your friends.
 
-HTML is comprised of Tags which are used to create Elements. The simplest and clearest tag, would be the paragraph tag: `<p>`. An opening tag and a closing tag are the start and end of an end of an element. The stuff in between the tag is content. So a full paragraph element will be:
+{{ site.data.glossary.html.term }} is comprised of Tags which are used to create Elements. The simplest and clearest tag, would be the paragraph tag: `<p>`. An opening tag and a closing tag are the start and end of an end of an element. The stuff in between the tag is content. So a full paragraph element will be:
 `<p>Hello World</p>`.
 
 Every HTML Document has the same structure:

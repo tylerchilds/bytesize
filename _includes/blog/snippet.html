@@ -3,9 +3,11 @@
     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   </h2>
 
-  {% include blog/meta.html post=post %}
+  {% include blog/meta.html %}
 
-  {{ post.excerpt }}
+  <p>
+    {{ post.description }}
+  </p>
 
-  <a href="{{ post.url }}">Read more</a>  
+  <a href="{{ post.url }}">Read {{post.title}}</a>
 </div>

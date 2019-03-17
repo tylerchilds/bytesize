@@ -4,13 +4,17 @@ title:  "Web Anatomy"
 date:   2019-03-12 18:05:00 -0800
 categories: basics
 permalink: /posts/web-anatomy
+description: >
+  Every webpage is made up primarily of three technologies:
+  Hypertext Markup Language (HTML), Cascading Style Sheets (CSS)
+  and JavaScript (JS). When they're all combined they produce amazing user experiences.
 ---
 
 ## Prerequisites
 This post assumes you've got a web browser, a text editor, and can create an HTML Document. If that doesn't make sense, no worries, just go and check out the post titled Hello World.
 
 ## Overview
-Every webpage is made up primarily of three technologies: Hypertext Markup Language (HTML), Cascading Style Sheets (CSS) and JavaScript (JS). Each of these has a distinct role and when they're all can combined produce amazing user experiences.
+Every webpage is made up primarily of three technologies: Hypertext Markup Language (HTML), Cascading Style Sheets (CSS) and JavaScript (JS). When they're all combined they produce amazing user experiences.
 
 ### Hypertext Markup Language
 HTML is the structure of the content of your webpage and also includes your CSS and JavaScript, whether they are internal or external files. HTML tags can have various attributes, which can be used to select elements with CSS and can be manipulated by JavaScript.

@@ -1,5 +1,18 @@
 /*
-  1: Layout
+  1. General
+*/
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+}
+
+/*
+  2: Layout
 */
 
 body {
@@ -14,6 +27,10 @@ footer {
   background-color: var(--gray6);
 }
 
+/*
+  2.1: Header
+*/
+
 .site-title:link,
 .site-title:visited,
 .site-title:hover,
@@ -25,7 +42,7 @@ footer {
 }
 
 /*
-  1.2: Homepage Layout
+  2.3: Homepage Layout
 */
 
 .layout-homepage {
@@ -33,7 +50,7 @@ footer {
 }
 
 /*
-  1.3: Two Column Layout
+  2.4: Two Column Layout
 */
 
 .layout-two-column {
@@ -75,7 +92,7 @@ footer {
 }
 
 /*
-  2. Post Lists
+  3: Post Lists
 */
 
 .snippet {
@@ -99,7 +116,7 @@ footer {
 }
 
 /*
-  3. Posts
+  4: Posts
 */
 
 .post {
@@ -107,7 +124,7 @@ footer {
 }
 
 /*
-  4 Examples
+  5: Examples
 */
 
 .example {

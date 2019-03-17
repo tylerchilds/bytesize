@@ -226,6 +226,10 @@ abbr{
   cursor: default;
 }
 
+abbr[title] {
+  text-decoration: none;
+}
+
 table{
   border-radius: 2px;
   border-collapse: separate;
