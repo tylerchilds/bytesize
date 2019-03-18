@@ -19,19 +19,21 @@ layout: default
 
 <article class="page" itemscope itemtype="https://schema.org/BlogPosting">
   <p class="page-meta">
-    {% if page.author %}
-      By
-      <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-        <span itemprop="name">{{ page.author }}</span>
-      </span>
-      <br />
+    Posted
+    {% assign author = site.data.authors[page.author] %}
+    {% if author %}
+      by
+      <a href="#author-detail" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">{{ author.fullname }}</span>
+      </a>
     {% endif %}
-    On <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    in {{ cats_content }}
 </p>
 
   <div class="page-content" itemprop="articleBody">
     {{ content }}
   </div>
-
-  Categories: {{ cats_content }}
+  <a name="author-detail"></a>
+  {% include components/author-detail.html %}
 </article>

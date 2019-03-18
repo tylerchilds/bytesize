@@ -8,6 +8,7 @@ description: >
   Anyone that reads this post is a software engineer.
   Go ahead and read it to assume a new identity or
   be assured of the one you already have.
+author: tyler
 ---
 
 There's a lot of debate around what a software engineer is, what a software engineer does and what is or isn't a programming language.

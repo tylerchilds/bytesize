@@ -8,9 +8,9 @@ description: >
   Hello World is a common way programmers learn a new language.
   If you're brand new to web development or coding in general, this post is
   a straight to the point introduction.
+author: tyler
 ---
 
-## Prerequisites
 To get started with web development, all you need is a web browser and a text editor. You're using a web browser right now to read this. If you're not using the latest version of Firefox, Chrome, Safari or Edge, I recommend downloading or updating to one of them. Personally, I prefer using Firefox or Chrome.
 
 For a text editor, you'll need something that can work with plain text files. If you're not sure what that means, that's okay. You can just install Sublime Text or any of the others listed on the Resources page. If you want to research and find one for yourself, you can search something like, "plain text editor for html".

@@ -9,10 +9,9 @@ description: >
   Every webpage is made up primarily of three technologies:
   Hypertext Markup Language (HTML), Cascading Style Sheets (CSS)
   and JavaScript (JS). When they're all combined they produce amazing user experiences.
-author: Tyler Childs
+author: tyler
 ---
 
-## Prerequisites
 This post assumes you've got a web browser, a text editor, and can create an HTML Document. If that doesn't make sense, no worries, just go and check out the post titled Hello World.
 
 ## Overview
