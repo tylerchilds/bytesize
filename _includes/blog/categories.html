@@ -1,8 +1,8 @@
-<nav class="site-sub-nav">
+<ul>
   {% for category in site.categories %}
     {% assign cat = category | first %}
-    <div>
-        <a href='/blog/category/{{ cat }}'>{{ site.data.cats[cat].name }}</a>
-    </div>
+    <li>
+      <a href='/blog/category/{{ cat }}'>{{ site.data.cats[cat].name }}</a>
+    </li>
   {% endfor %}
-</nav>
+</ul>

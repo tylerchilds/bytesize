@@ -11,6 +11,14 @@ h6 a {
   text-decoration: none;
 }
 
+.sidebar a {
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+}
+
 /*
   1.1 Page Styles
 */
@@ -61,8 +69,9 @@ h6 a {
   border: 1px solid var(--gray4);
   border-radius: var(--border-radius);
   float: right;
-  margin-left: 2.4rem;
+  margin: 0 0 1.2rem 2.4rem;
   padding: 1.2rem;
+  text-align: center;
 }
 
 /*
@@ -96,11 +105,61 @@ footer {
 }
 
 /*
+  2.2 Sidebar
+*/
+
+.sidebar h4 {
+  color: var(--gray3);
+  text-transform: uppercase;
+  padding-bottom: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-bottom: 1.2rem;
+  margin-left: 0;
+}
+
+@media (min-width: 45rem) {
+  .sidebar h4 {
+    font-size: var(--font-size);
+  }
+}
+
+.sidebar a {
+  display: inline-block;
+  line-height: 3.6rem;
+}
+
+/*
   2.3: Homepage Layout
 */
 
 .layout-homepage {
+  display: grid;
+  grid-template-areas: "promoted promoted recent"
+                       "featured basics categories";
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
+.area-promoted {
+  grid-area: promoted;
+}
+
+.area-recent {
+  grid-area: recent;
+}
+
+.area-featured {
+  grid-area: featured;
+}
+
+.area-basics {
+  grid-area: basics;
+}
+
+.area-categories {
+  grid-area: categories;
 }
 
 /*
@@ -130,16 +189,12 @@ footer {
 
 .area-sidebar {
   grid-area: sidebar;
+  margin-bottom: 4.8rem;
 }
 
 @media (min-width: 45rem) {
   .area-sidebar {
     text-align: right;
-  }
-}
-
-@media (min-width: 45rem) {
-  .area-sidebar {
     border-right: 1px solid var(--gray5);
     padding-right: var(--gutter-width);
   }

@@ -4,10 +4,12 @@ title:  "Web Anatomy"
 date:   2019-03-12 18:05:00 -0800
 categories: basics
 permalink: /posts/web-anatomy
+featured: true
 description: >
   Every webpage is made up primarily of three technologies:
   Hypertext Markup Language (HTML), Cascading Style Sheets (CSS)
   and JavaScript (JS). When they're all combined they produce amazing user experiences.
+author: Tyler Childs
 ---
 
 ## Prerequisites

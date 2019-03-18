@@ -2,5 +2,5 @@
 layout: blog/all
 title: Blog
 permalink: /blog/
-weight: 30
+weight: 10
 ---
