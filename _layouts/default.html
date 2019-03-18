@@ -9,6 +9,16 @@
 
     <main class="page-content">
       <div class="layout-two-column">
+        <div class="area-title">
+          <div class="page-header">
+            {% if site.data.cats[page.cat].name %}
+              {% assign page_title = site.data.cats[page.cat].name %}
+            {% else %}
+              {% assign page_title = page.title %}
+            {% endif %}
+            <h1 class="page-title" itemprop="name headline">{{ page_title }}</h1>
+          </div>
+        </div>
         <div class="area-main">
           {{ content }}
         </div>
