@@ -24,48 +24,35 @@ nav a {
 */
 
 .page-header{
-  display: inline-block;
-  margin: 2.4rem 0;
-  position: relative;
-  z-index: 1;
-}
-
-.page-header::before,
-.page-header::after {
-  border-radius: .3rem;
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.page-header::before {
-  background-color: var(--gray3);
-  left: -3.6rem;
-  right: -3.6rem;
-  height: 1.2rem;
-  z-index: 5;
-}
-
-.page-header::after {
-  background-color: var(--gray5);
-  height: .6rem;
-  left: -9.6rem;
-  right: -9.6rem;
+  padding: 4.8rem 0;
+  text-align: center;
 }
 
 .page-header h1 {
-  background-color: var(--primary);
-  border-radius: var(--border-radius);
-  color: var(--gray6);
-  padding: 1.2rem 3.6rem;
-  position: relative;
-  z-index: 10;
+  font-weight: bold;
+  padding: 0;
 }
 
+@media (min-width: 45rem) {
+  .page-header h1 {
+    font-size: 9.6rem;
+    line-height: 11rem;
+  }  
+}
 
 .page-meta {
   color: var(--gray3);
+}
+
+.page-navigation {
+  display: grid;
+  column-gap: var(--gutter-width);
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2.4rem;
+}
+
+.page-previous {
+  text-align: right;
 }
 
 /*
@@ -161,24 +148,21 @@ footer {
 */
 
 .layout-two-column {
-  max-width: 1200px;
+  display: grid;
+  grid-template-areas:  "title"
+                        "main"
+                        "sidebar";
+  max-width: 85rem;
   margin: 0 auto;
 }
 
 @media (min-width: 45rem) {
   .layout-two-column {
-    display: grid;
-    grid-template-areas: "title title"
-                         "sidebar main";
-    grid-template-columns: minmax(1fr, 200px) minmax(1fr, 65rem);
+    grid-template-areas: "sidebar main";
+    grid-template-columns: minmax(20rem, auto) minmax(60vw, 65rem);
     column-gap: var(--gutter-width);
     row-gap: var(--gutter-width);
   }
-}
-
-.area-title {
-  grid-area: title;
-  text-align: center;
 }
 
 .area-sidebar {
@@ -198,6 +182,7 @@ footer {
   grid-area: main;
   width: 100%;
   max-width: 65rem;
+  padding-top: 2.4rem;
   padding-bottom: 4.8rem;
 }
 
@@ -296,7 +281,11 @@ footer {
   background-color: var(--gray6);
   border: 1px solid var(--gray4);
   border-radius: var(--border-radius);
-  padding: 1.2rem;
+  padding: 2.4rem;
+}
+
+.author-bio {
+  padding-bottom: 0;
 }
 
 /*

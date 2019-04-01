@@ -23,9 +23,8 @@ layout: default
     {% assign author = site.data.authors[page.author] %}
     {% if author %}
       by
-      <a href="#author-detail" itemprop="author" itemscope itemtype="https://schema.org/Person">
-        <span itemprop="name">{{ author.fullname }}</span>
-      </a>
+      <a href="/authors/{{ author.slug }}" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">{{ author.fullname }}</span></a>
     {% endif %}
     on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
     in {{ cats_content }}
@@ -34,6 +33,20 @@ layout: default
   <div class="page-content" itemprop="articleBody">
     {{ content }}
   </div>
-  <a name="author-detail"></a>
+
+  <aside class="page-navigation">
+    <div class="page-next">
+      {% if page.next.url %}
+        <a href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
+      {% endif %}
+    </div>
+
+    <div class="page-previous">
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
+      {% endif %}
+    </div>
+  </aside>
+
   {% include components/author-detail.html %}
 </article>

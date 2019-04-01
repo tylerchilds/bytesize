@@ -1,3 +1,3 @@
 (function(){
-    document.querySelectorAll('.js-print').addEventListener('click', window.print);
+    // document.querySelectorAll('.js-print').addEventListener('click', window.print);
 })();

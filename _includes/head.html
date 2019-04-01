@@ -7,7 +7,7 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 	<style type="text/css">
-		:root {
+		html {
 			--base-font: 'Avenir', 'Avenir Next','Helvetica Neue','Segoe UI', 'Verdana', sans-serif;
 			--monospace-font: 'Consolas', 'Monaco', 'Courier New', monospace;
 
@@ -43,14 +43,6 @@
 
 			--white: #ffffff;
 
-			--brown: #954307;
-			--dark-orange: #ff5100;
-			--orange: #ff6b01;
-			--light-orange: #ff8f13;
-			--cream: #e9e1d4;
-		}
-
-		html{
 			box-sizing: border-box;
 			font-size: 62.5%;
 			height: 100%;
@@ -62,7 +54,28 @@
 			}
 		}
 
-		body{
+		.dark-theme {
+			--primary:#216a9e;
+			--primary-dark: var(--primary);
+
+			--link: #4076D4;
+			--link--visited: #9140D4;
+			--link--hover: var(--link);
+			--link--active: #D44076;
+
+			--gray1: #efeff0;
+			--gray2: #5a5a5b;
+			--gray3: #7d7d7e;
+
+			--gray4: #cdcdce;
+			--gray5: #dededf;
+			--gray6: #efeff0;
+
+			--white: #000;
+		}
+
+		body {
+			background-color: var(--white);
 			box-sizing: border-box;
 			color: var(--gray1);
 			font-family: var(--base-font);
