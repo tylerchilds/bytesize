@@ -49,6 +49,8 @@ Then open it in your web browser and it'll look something like this:
 
 {% include components/browser.html url="/examples/hello-world" height="200px" title="Hello World" %}
 
+**WOW!** I know it's not much to look at, but that's your first program. Everyone who is anyone starts with Hello World in every language. [You're an engineer!](/posts/you-are-an-engineer)
+
 If you double click an HTML file in a folder, it should open with your default browser. If that doesn't work or you want to try it with a different browser, right click the file and use "Open with" to select the browser you'd like to use.
 
 ### Going Beyond
