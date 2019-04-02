@@ -1,6 +1,6 @@
 ---
-layout: blog/all
-title: Latest
-permalink: /blog/
+layout: blog/archive
+title: Archive
+permalink: /archive/
 weight: 10
 ---

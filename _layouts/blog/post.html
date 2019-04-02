@@ -19,16 +19,9 @@ layout: default
 
 <article class="page" itemscope itemtype="https://schema.org/BlogPosting">
   <p class="page-meta">
-    Posted
-    {% assign author = site.data.authors[page.author] %}
-    {% if author %}
-      by
-      <a href="/authors/{{ author.slug }}" itemprop="author" itemscope itemtype="https://schema.org/Person">
-        <span itemprop="name">{{ author.fullname }}</span></a>
-    {% endif %}
-    on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    {% include blog/meta.html post=post %}
     in {{ cats_content }}
-</p>
+  </p>
 
   <div class="page-content" itemprop="articleBody">
     {{ content }}

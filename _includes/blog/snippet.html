@@ -3,6 +3,10 @@
     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   </h2>
 
+  <p class="page-meta">
+    {% include blog/meta.html post=post %}
+  </p>
+
   <p>
     {{ post.description }}
   </p>
