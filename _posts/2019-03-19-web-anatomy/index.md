@@ -14,7 +14,7 @@ demo:
   height: 500px
   key: demo
   tabs:
-    - url: /examples/web-anatomy
+    - url: /examples/web-anatomy/
       title: Demo
       id: demo
     # - url: /examples/web-anatomy/index.html

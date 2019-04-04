@@ -13,7 +13,7 @@ demo:
   height: 300px
   key: demo
   tabs:
-    - url: /examples/hello-world
+    - url: /examples/hello-world/
       title: Hello World
       id: demo
     # - url: /examples/hello-world/index.html
