@@ -9,6 +9,17 @@ description: >
   If you're brand new to web development or coding in general, this post is
   a straight to the point introduction.
 author: tyler
+demo:
+  height: 300px
+  key: demo
+  tabs:
+    - url: /examples/hello-world
+      title: Hello World
+      id: demo
+    - url: /examples/hello-world/index.html
+      title: HTML
+      id: html-source
+      base_path_key: github
 ---
 
 To get started with web development, all you need is a web browser and a text editor. You're using a web browser right now to read this. If you're not using the latest version of Firefox, Chrome, Safari or Edge, I recommend downloading or updating to one of them. Personally, I prefer using Firefox or Chrome.
@@ -47,7 +58,11 @@ In that file, enter the following HTML code:
 
 Then open it in your web browser and it'll look something like this:
 
-{% include components/browser.html url="/examples/hello-world" height="200px" title="Hello World" %}
+{% 
+  include components/browser.html
+  tabs=page.demo.tabs
+  height=page.demo.height
+%}
 
 **WOW!** I know it's not much to look at, but that's your first program. Everyone who is anyone starts with Hello World in every language. [You're an engineer!](/posts/you-are-an-engineer)
 

@@ -13,6 +13,7 @@ description: >
   geared towards software engineers that are either new or looking to simplify.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://baseline.dev" # the base hostname & protocol for your site
+github_url: "https://raw.githubusercontent.com/tylerchilds/bytesize/master"
 
 # Build settings
 markdown: kramdown

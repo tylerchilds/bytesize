@@ -1,13 +1,29 @@
-<div class="example">
+<div class="example" aria-live="assertive">
   <div class="example-tab-list">
-    <div class="example-tab">
-        {{ include.title }}
-    </div>
+    {% for tab in include.tabs %}
+      <button class="example-tab {% if forloop.first %}-active{% endif %}" data-id="{{ tab.id }}">
+        {{ tab.title }}
+      </button>
+    {% endfor %}
   </div>
-  <div class="example-address">
-    <input value="https://bytesize.dev{{ include.url }}" type="text" />
-  </div>
-  <div class="example-iframe">
-    <iframe src="{{ include.url }}" height="{{ include.height }}" width="100%"></iframe>
-  </div>
+
+  {% for tab in include.tabs %}
+    {% case tab.base_path_key %}
+      {% when 'github' %}
+        {% assign base_path = site.github_url %}
+        {% assign vanity_path = "view-source:" | append: site.url %}
+      {% else %}
+        {% assign base_path = "" %}
+        {% assign vanity_path = site.url %}
+    {% endcase %}
+
+    <section class="example-tab-content {% if forloop.first %}-active{% endif %}" id="{{ tab.id }}">
+      <div class="example-address">
+          <input value="{{ vanity_path }}{{ tab.url }}" type="text" />
+        </div>
+        <div class="example-iframe">
+          <iframe src="{{ base_path }}{{ tab.url }}" height="{{ include.height }}" width="100%"></iframe>
+        </div>
+    </section>
+  {% endfor %}
 </div>

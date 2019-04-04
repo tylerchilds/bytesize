@@ -1,7 +1,7 @@
 ---
 layout: blog/post
 title:  "Web Anatomy"
-date:   2019-03-12 18:05:00 -0800
+date:   2019-03-19 18:05:00 -0800
 categories: basics
 permalink: /posts/web-anatomy
 featured: true
@@ -10,6 +10,17 @@ description: >
   Hypertext Markup Language (HTML), Cascading Style Sheets (CSS)
   and JavaScript (JS). When they're all combined they produce amazing user experiences.
 author: tyler
+demo:
+  height: 500px
+  key: demo
+  tabs:
+    - url: /examples/web-anatomy
+      title: Demo
+      id: demo
+    - url: /examples/web-anatomy/index.html
+      title: HTML
+      id: html-source
+      base_path_key: github
 ---
 
 This post assumes you've got a web browser, a text editor, and can create an HTML Document. If that doesn't make sense, no worries, just go and check out the post titled [Hello World](/posts/hello-world).
@@ -49,9 +60,8 @@ _A bouncer for the world's smallest club with a max occupancy of 10 hired you to
 
 {% 
   include components/browser.html
-  url="/examples/web-anatomy"
-  height="500px"
-  title="Counter"
+  tabs=page.demo.tabs
+  height=page.demo.height
 %}
 
 ## Going Beyond
