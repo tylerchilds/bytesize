@@ -16,10 +16,10 @@ demo:
     - url: /examples/hello-world
       title: Hello World
       id: demo
-    - url: /examples/hello-world/index.html
-      title: HTML
-      id: html-source
-      base_path_key: github
+    # - url: /examples/hello-world/index.html
+    #   title: HTML
+    #   id: html-source
+    #   base_path_key: github
 ---
 
 To get started with web development, all you need is a web browser and a text editor. You're using a web browser right now to read this. If you're not using the latest version of Firefox, Chrome, Safari or Edge, I recommend downloading or updating to one of them. Personally, I prefer using Firefox or Chrome.
@@ -64,9 +64,9 @@ Then open it in your web browser and it'll look something like this:
   height=page.demo.height
 %}
 
-**WOW!** I know it's not much to look at, but that's your first program. Everyone who is anyone starts with Hello World in every language. [You're an engineer!](/posts/you-are-an-engineer)
-
 If you double click an HTML file in a folder, it should open with your default browser. If that doesn't work or you want to try it with a different browser, right click the file and use "Open with" to select the browser you'd like to use.
+
+**WOW!** [You're an engineer!](/posts/you-are-an-engineer) I know it's not much to look at, but that's your first program. Every software engineer starts with Hello World in any language.
 
 ### Going Beyond
 You can view the source of any webpage by adding view-source to the URL (e.g. view-source:https://bytesize.dev). You can also right-click and select something like "View Page Source". To view the source of my demos, you can right-click the demo and select "View Frame Source".

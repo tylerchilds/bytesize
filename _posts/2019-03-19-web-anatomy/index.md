@@ -17,10 +17,10 @@ demo:
     - url: /examples/web-anatomy
       title: Demo
       id: demo
-    - url: /examples/web-anatomy/index.html
-      title: HTML
-      id: html-source
-      base_path_key: github
+    # - url: /examples/web-anatomy/index.html
+    #   title: HTML
+    #   id: html-source
+    #   base_path_key: github
 ---
 
 This post assumes you've got a web browser, a text editor, and can create an HTML Document. If that doesn't make sense, no worries, just go and check out the post titled [Hello World](/posts/hello-world).
