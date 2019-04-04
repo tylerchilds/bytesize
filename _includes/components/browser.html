@@ -13,7 +13,7 @@
         {% assign base_path = site.github_url %}
         {% assign vanity_path = "view-source:" | append: site.url %}
       {% else %}
-        {% assign base_path = site.url %}
+        {% assign base_path = site.url | remove: "https" %}
         {% assign vanity_path = site.url %}
     {% endcase %}
 
