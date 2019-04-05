@@ -11,7 +11,7 @@ description: >
   or help you prevent this problem in a few quick lines of CSS.
 author: tyler
 demo:
-  height: 500px
+  height: 400px
   key: demo
   tabs:
     - url: /examples/the-perfect-button/
