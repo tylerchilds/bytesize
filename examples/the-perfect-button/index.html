@@ -15,19 +15,23 @@
       padding: 20px;
     }
   </style>
-  <link rel="stylesheet" href="./the-perfect-button.css?bust=1" />
+  <link rel="stylesheet" href="./the-perfect-button.css?bust=2" />
   <body>
 
     <div class="container">
-      <button>
+      <button class="button">
         The Perfect Button
       </button>
 
-      <input type="submit" class="-outlined" value="Outlined">
+      <input type="submit" class="button -outlined" value="Outlined">
 
-      <input type="button" class="-secondary" value="Secondary">
+      <input type="button" class="button -secondary" value="Secondary">
 
       <a href="#" class="button -link">Link</a>
+
+      <button class="button" disabled>
+        Disabled
+      </button>
     </div>
   </body>
 </html>
