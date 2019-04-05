@@ -14,5 +14,3 @@ While the tools to write, inspect, and debug code has evolved greatly in the pas
 The content is designed and created to last as long as the web exists by requiring zero dependencies other than a text editor and a web browser. All of the posts are focused on a single topic and aim to be clear, but not comprehensive. One of the greatest strengths of an engineer is knowing how to find answers. These posts aim to give enough context and straightforward code to help guide your searches if you'd like to learn more and expand on the examples.
 
 If this is your first time here and you're new to web development, I recommend checking out “Hello World”. It's the only tutorial on this site and will help you to get started and unlock the ability to explore the rest of the code.
-
-
