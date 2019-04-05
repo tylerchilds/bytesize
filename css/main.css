@@ -248,13 +248,14 @@ footer {
 .example-tab {
   background-color: var(--gray5);
   border-radius: var(--example-spacing) var(--example-spacing) 0 0;
+  cursor: pointer;
   display: inline-block;
-  margin: 0 var(--example-spacing);
+  margin-left: var(--example-spacing);
   padding: .6rem 1.2rem;
 }
-
 .example-tab.-active {
   background-color: var(--gray6);
+  cursor: default;
 }
 
 .example-tab-content {

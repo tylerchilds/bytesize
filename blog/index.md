@@ -2,5 +2,5 @@
 layout: blog/archive
 title: Archive
 permalink: /archive/
-weight: 10
+weight: 40
 ---
