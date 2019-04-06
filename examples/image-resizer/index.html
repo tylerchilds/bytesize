@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <title>Image Resizer</title>
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .image-results {
+      display: grid;
+      column-gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  </style>
+  <body>
+    <input type="file" id="image-input" accept="image/*" value="Upload And Resize Image" />
+
+    <section class="image-results">
+      <div>
+        <h3>Original</h3>
+        <img id="original" />
+      </div>
+      <div>
+        <h3>Resized</h3>
+        <img id="resized" />
+      </div>
+    </section>
+
+    <script src="./demo.js" type="module"></script>
+  </body>
+</html>
