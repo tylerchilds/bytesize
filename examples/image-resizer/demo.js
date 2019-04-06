@@ -1,7 +1,6 @@
 import {
   loadImage,
-  resize,
-  toBase64
+  resizeImage
 } from './image-resizer.js';
 
 (function(){
@@ -15,13 +14,17 @@ import {
   let resizedImage;
 
   async function onImageSelection() {
-    console.log('what are we')
+
     await loadImage(this.files && this.files[0]).then(result => {
-      console.log(result);
       originalImage = result;
     });
-    console.log(originalImage);
-    elements.original.src= originalImage;
+
+    await resizeImage(originalImage).then(result => {
+      resizedImage = result;
+    });
+
+    elements.original.src = originalImage;
+    elements.resized.src = resizedImage;
   }
 
   elements.imageInput.addEventListener("change", onImageSelection);
