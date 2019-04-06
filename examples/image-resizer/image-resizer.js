@@ -7,33 +7,35 @@ async function getImageElement(image) {
   })
 }
 
-function createCanvas(imageElement) {
-  const canvas = document.createElement("canvas");
-  document.body.appendChild(canvas);
+function getResizedDimensions(elem, maxDimensionSize) {
+  const 
+    [ bigSide, smallSide ] = elem.width > elem.height ?
+    ['width', 'height']: 
+    ['height', 'width'];
 
-  canvas.width = imageElement.width;
-  canvas.height = imageElement.height;
+  return {
+    [bigSide]: maxDimensionSize,
+    [smallSide]: maxDimensionSize / elem[bigSide] * elem[smallSide]
+  }
+}
+
+function createCanvasImage(imageElement, dimensions) {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = dimensions.width;
+  canvas.height = dimensions.height;
+
+  ctx.drawImage(imageElement, 0, 0, dimensions.width, dimensions.height);
 
   return canvas;
 }
 
-function drawImage(canvas, imageElement) {
-  const ctx = canvas.getContext('2d');
-  console.log('but the imageElement is ', imageElement)
-  ctx.drawImage(imageElement, 0, 0);
-}
-
-export async function resizeImage(image) {
+export async function resizeImage(image, maxDimensionSize) {
   const imageElement = await getImageElement(image);
-  const canvas = createCanvas(imageElement);
-  
-  drawImage(canvas, imageElement);
+  const dimensions = getResizedDimensions(imageElement, maxDimensionSize);
 
-  // canvas.remove();
-}
-
-export function toBase64() {
-
+  return createCanvasImage(imageElement, dimensions).toDataURL('image/jpeg', 1.0);
 }
 
 export async function loadImage(file) {
@@ -46,4 +48,8 @@ export async function loadImage(file) {
 
     fileReader.readAsDataURL(file);
   });
+}
+
+export default async function getResizedImage(file, maxDimensionSize) {
+  return await resizeImage(await(loadImage(file)), maxDimensionSize)
 }

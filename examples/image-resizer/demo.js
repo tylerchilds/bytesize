@@ -6,25 +6,19 @@ import {
 (function(){
   const elements = {
     imageInput: document.getElementById("image-input"),
+    results: document.querySelector(".image-results"),
     original: document.getElementById("original"),
     resized: document.getElementById("resized"),
   }
 
-  let originalImage;
-  let resizedImage;
-
   async function onImageSelection() {
-
-    await loadImage(this.files && this.files[0]).then(result => {
-      originalImage = result;
-    });
-
-    await resizeImage(originalImage).then(result => {
-      resizedImage = result;
-    });
+    const originalImage = await loadImage(this.files && this.files[0])
+    const resizedImage = await resizeImage(originalImage, 480)
 
     elements.original.src = originalImage;
     elements.resized.src = resizedImage;
+
+    elements.results.classList.remove('hidden');
   }
 
   elements.imageInput.addEventListener("change", onImageSelection);
