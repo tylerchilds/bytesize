@@ -1,6 +1,6 @@
 import {
-  loadImage,
-  resizeImage
+  loadFile,
+  getResizedImageFromFile
 } from './image-resizer.js';
 
 (function(){
@@ -12,8 +12,10 @@ import {
   }
 
   async function onImageSelection() {
-    const originalImage = await loadImage(this.files && this.files[0])
-    const resizedImage = await resizeImage(originalImage, 480)
+    const file = this.files && this.files[0];
+
+    const originalImage = await loadFile(file);
+    const resizedImage = await getResizedImageFromFile(file, 480, console.error);
 
     elements.original.src = originalImage;
     elements.resized.src = resizedImage;
