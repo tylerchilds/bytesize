@@ -14,11 +14,13 @@ import {
   async function onImageSelection() {
     const file = this.files && this.files[0];
 
-    const originalImage = await loadFile(file);
-    const resizedImage = await getResizedImageFromFile(file, 480, console.error);
+    const originalImage = await loadFile(file).catch(console.error);
+    const resizedImage = await getResizedImageFromFile(file, 480).catch(console.error);
 
     elements.original.src = originalImage;
-    elements.resized.src = resizedImage;
+    elements.resized.src = resizedImage.dataURL;
+
+    console.log('resized image:', resizedImage);
 
     elements.results.classList.remove('hidden');
   }

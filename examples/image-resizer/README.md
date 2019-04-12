@@ -4,7 +4,7 @@ Image Resizer is a light-touch approach to resizing an image. It has three publi
 
 * `loadFile(file)`: Returns a file as Base64.
 * `resizeImage(image, maxDimensionSize)`: Returns a resized Base64 image.
-* `getResizedImageFromFile(file, maxDimensionSize [, errorHandler])`: Returns a resized Base64 image by composing `loadFile` and `resizeImage`. Has an errorHandler argument that fires when an error occurs.
+* `getResizedImageFromFile(file, maxDimensionSize)`: Returns a resized Base64 image by composing `loadFile` and `resizeImage`.
 
 ### Example using a file input
 
@@ -19,7 +19,7 @@ Image Resizer is a light-touch approach to resizing an image. It has three publi
 
   async function onImageSelection() {
     const file = this.files && this.files[0];
-    const resizedImage = await getResizedImage(file, 480, console.error);
+    const resizedImage = await getResizedImage(file, 480).catch(console.error);
 
     console.log(resizedImage);
   }

@@ -2,14 +2,19 @@
   Private API
 */
 
-async function getImageElement(image) {
+async function getImageElement(imageSource) {
   return await new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = () => reject({ reason: 'getImageElement(): Image Load Error' });
-    img.src = image;
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject({ reason: 'getImageElement: Image Load Error' });
+    image.src = imageSource;
   })
 }
+
+async function getMime(imageSource) {
+  const image = await fetch(imageSource);
+  return (await image.blob()).type;
+};
 
 function getResizedDimensions(elem, maxDimensionSize) {
   const 
@@ -47,11 +52,19 @@ function createCanvasImage(imageElement, dimensions) {
   Public API
 */
 
-export async function resizeImage(image, maxDimensionSize) {
-  const imageElement = await getImageElement(image);
+export async function resizeImage(imageSource, maxDimensionSize) {
+  const mime = await getMime(imageSource);
+  const imageElement = await getImageElement(imageSource);
   const dimensions = getResizedDimensions(imageElement, maxDimensionSize);
 
-  return createCanvasImage(imageElement, dimensions).toDataURL('image/jpeg', 1.0);
+  const image = createCanvasImage(imageElement, dimensions);
+
+  return {
+    blob: await new Promise((resolve) => {
+      image.toBlob(blob => resolve(blob), mime, 1);
+    }),
+    dataURL: image.toDataURL(mime, 1)
+  }
 }
 
 export async function loadFile(file) {
@@ -59,17 +72,17 @@ export async function loadFile(file) {
     const fileReader = new FileReader();
 
     fileReader.onload = (e) => resolve(e.target.result);
-    fileReader.onabort = () => reject({ reason: 'loadFile(): File Read Aborted' });
-    fileReader.onerror = () => reject({ reason: 'loadFile(): File Read Error' });
+    fileReader.onabort = () => reject({ reason: 'loadFile: File Read Aborted' });
+    fileReader.onerror = () => reject({ reason: 'loadFile: File Read Error' });
 
     fileReader.readAsDataURL(file);
   });
 }
 
-export async function getResizedImageFromFile(file, maxDimensionSize, errorHandler) {
+export async function getResizedImageFromFile(file, maxDimensionSize) {
   return await new Promise(async (resolve, reject) => {
-    const image = await loadFile(file).catch(errorHandler);
-    const resizedImage = await resizeImage(image, maxDimensionSize).catch(errorHandler);
+    const imageSource = await loadFile(file).catch((e) => reject(e));
+    const resizedImage = await resizeImage(imageSource, maxDimensionSize).catch(((e) => reject(e)));
 
     resolve(resizedImage);
   });
