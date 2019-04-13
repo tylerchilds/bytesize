@@ -1,7 +1,7 @@
 ---
 layout: blog/post
 title:  "Web Anatomy"
-date:   2019-03-19 18:05:00 -0800
+date:   2019-03-19 00:01:00 -0800
 categories: basics
 permalink: /posts/web-anatomy
 featured: true

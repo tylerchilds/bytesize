@@ -1,7 +1,7 @@
 ---
 layout: blog/post
 title:  "You are an engineer"
-date:   2019-03-26 18:05:00 -0800
+date:   2019-03-26 00:01:00 -0800
 categories: asides
 permalink: /posts/you-are-an-engineer
 description: >

@@ -1,7 +1,7 @@
 ---
 layout: blog/post
 title:  "Image Resizing"
-date:   2019-04-12 18:30:00 -0800
+date:   2019-04-12 00:01:00 -0800
 categories: features
 permalink: /posts/image-resizing
 description: >
