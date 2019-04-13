@@ -1,5 +1,5 @@
-<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/main.js" | prepend: site.baseurl }}?bustamove={{ site.cache_buster }}"></script>
 
 {% if page.js %}
-  <script src="{{ "/js/pages/" | prepend: site.baseurl }}{{ page.js }}"></script>
+  <script src="{{ "/js/pages/" | prepend: site.baseurl }}{{ page.js }}?bustamove={{ site.cache_buster }}"></script>
 {% endif %}

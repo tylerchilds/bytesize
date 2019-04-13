@@ -15,7 +15,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bytesize.dev" # the base hostname & protocol for your site
 github_baseurl: "https://github.com/tylerchilds/bytesize/tree/master"
 
-cache_buster: 20190405_1
+cache_buster: 20190412_1
 
 # Build settings
 markdown: kramdown
