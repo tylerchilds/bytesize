@@ -5,9 +5,9 @@ date:   2019-04-12 00:01:00 -0800
 categories: features
 permalink: /posts/image-resizing
 description: >
-  Have you ever been on a webpage that asks you to upload an image?
-  You meticulously comb through all your pictures to find the best one for your new profile image
-  and you finally go to upload it. "Image must be smaller than..." frustrated, yo
+  One of the things that really grinds my gears is trying to upload an image and then being told it needs to be smaller.
+  This post covers how a website can dynamically resize an image to the size they need and also lightly covers
+  Promises and asynchronous code.
 author: tyler
 demo:
   height: 400px
