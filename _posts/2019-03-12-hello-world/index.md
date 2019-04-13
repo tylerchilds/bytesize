@@ -58,11 +58,7 @@ In that file, enter the following HTML code:
 
 Then open it in your web browser and it'll look something like this:
 
-{% 
-  include components/browser.html
-  tabs=page.demo.tabs
-  height=page.demo.height
-%}
+{% include components/browser.html config=page.demo %}
 
 If you double click an HTML file in a folder, it should open with your default browser. If that doesn't work or you want to try it with a different browser, right click the file and use "Open with" to select the browser you'd like to use.
 

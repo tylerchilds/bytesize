@@ -13,6 +13,7 @@ author: tyler
 demo:
   height: 500px
   key: demo
+  github_path: /examples/web-anatomy
   tabs:
     - url: /examples/web-anatomy/
       title: Demo
@@ -58,11 +59,7 @@ Let's say this is for a client.
 
 _A bouncer for the world's smallest club with a max occupancy of 10 hired you to build an app so they can keep track of everyone in the club._ We'll need to make sure we never have a negative number of people in the club and we definitely can't have more than 10 otherwise the fire marshall will shut the club down.
 
-{% 
-  include components/browser.html
-  tabs=page.demo.tabs
-  height=page.demo.height
-%}
+{% include components/browser.html config=page.demo %}
 
 ## Going Beyond
 When an HTML file is parsed by a browser, it's represented under the hood using the **Document Object Model** (DOM).The DOM is what CSS and JavaScript actually interface with when styling or manipulating your webpage. You don't need to know much about it, but it might be useful when learning to know that HTML Elements become DOM Nodes, so your JavaScript is actually interacting with these nodes.

@@ -13,6 +13,7 @@ author: tyler
 demo:
   height: 400px
   key: demo
+  github_path: /examples/the-perfect-button
   tabs:
     - url: /examples/the-perfect-button/
       title: Demo
@@ -49,11 +50,7 @@ Let's break down exactly what our perfect button is going to need to do.
 
 ### Example
 
-{% 
-  include components/browser.html
-  tabs=page.demo.tabs
-  height=page.demo.height
-%}
+{% include components/browser.html config=page.demo %}
 
 ### Explanation
 

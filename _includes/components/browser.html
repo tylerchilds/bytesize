@@ -1,13 +1,13 @@
 <div class="example" aria-live="assertive">
   <div class="example-tab-list">
-    {% for tab in include.tabs %}
+    {% for tab in include.config.tabs %}
       <button class="example-tab {% if forloop.first %}-active{% endif %}" data-id="{{ tab.id }}">
         {{ tab.title }}
       </button>
     {% endfor %}
   </div>
 
-  {% for tab in include.tabs %}
+  {% for tab in include.config.tabs %}
     {% case tab.base_path_key %}
       {% when 'github' %}
         {% assign base_path = site.github_url %}
@@ -21,8 +21,12 @@
           <input value="{{ vanity_path }}{{ tab.url }}" type="text" />
         </div>
         <div class="example-iframe">
-          <iframe src="{{ base_path }}{{ tab.url }}" height="{{ include.height }}" width="100%"></iframe>
+          <iframe src="{{ base_path }}{{ tab.url }}" height="{{ include.config.height }}" width="100%"></iframe>
         </div>
     </section>
   {% endfor %}
+
+  <div class="example-link">
+    <a href="{{ site.github_baseurl }}{{ include.config.github_path }}" target="_blank">View Example Code</a>
+  </div>
 </div>
