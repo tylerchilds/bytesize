@@ -1,7 +1,7 @@
 ---
 layout: blog/post
 title:  "Accessibility and Semantic HTML"
-date:   2019-03-12 00:01:00 -0800
+date:   2019-04-19 00:01:00 -0800
 categories: basics
 permalink: /posts/accessibility-and-semantic-html
 description: >
