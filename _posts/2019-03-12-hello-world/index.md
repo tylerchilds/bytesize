@@ -12,6 +12,7 @@ author: tyler
 demo:
   height: 300px
   key: demo
+  github_path: /examples/hello-world
   tabs:
     - url: /examples/hello-world/
       title: Hello World
@@ -50,7 +51,9 @@ In that file, enter the following HTML code:
 
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
-  &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;head&gt;
+   &lt;title&gt;Hello World&lt;/title&gt;
+  &lt;/head&gt;
   &lt;body&gt;
     &lt;p&gt;Hello World&lt;/p&gt;
   &lt;/body&gt;

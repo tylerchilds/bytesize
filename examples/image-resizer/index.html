@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <title>Image Resizer</title>
+  <head>
+    <title>Image Resizer</title>
 
-  <style type="text/css">
-    html {
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+    <style type="text/css">
+      html {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
 
-    img {
-      max-width: 100%;
-    }
+      img {
+        max-width: 100%;
+      }
 
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
 
-    .image-results {
-      display: grid;
-      column-gap: 20px;
-      grid-template-columns: repeat(2, 1fr);
-    }
+      .image-results {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-    .hidden {
-      display: none;
-    }
-  </style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
   <body class="container">
     <input type="file" id="image-input" accept="image/*" />
 
